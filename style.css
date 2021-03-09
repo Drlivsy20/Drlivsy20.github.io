@@ -1,0 +1,650 @@
+html {
+  background-color: #e6e6e6;
+}
+
+header {
+  position: fixed;
+  width: 80px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #333333;
+}
+.nav {
+  width: 80px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.navigation {
+  width: 80px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.nav svg {
+  width: 50px;
+}
+.navigation svg {
+  width: 50px;
+  height: 50px;
+}
+
+.simm {
+  width: 80px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #333333;
+}
+.overline {
+  text-decoration: line-through;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+.desctiption {
+  margin: auto;
+  width: 600px;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+#Layer_1 {
+  fill: #ffa200;
+}
+.cookie {
+  width: 300px;
+  margin-left: 40%;
+  transition: all 0.15s;
+}
+.number {
+  position: relative;
+  transition: opacity 0.7s;
+  font-size: 40px;
+  font-weight: 900;
+  color: red;
+}
+.opacity {
+  opacity: 0;
+}
+.globalcounter {
+  margin-left: 46%;
+  margin-top: 40px;
+}
+#workers {
+  margin-left: 32%;
+}
+.rave {
+  background-color: #ff2424;
+  margin-left: 36%;
+  width: 500px;
+  height: 500px;
+  font-size: 40px;
+  border: 2px solid black;
+  transition: opacity 2s;
+}
+.dis {
+  transition: opacity 2s;
+}
+.bit1 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: width 0.473s, height 0.473s, opacity 0.473s;
+}
+.bit11 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: width 0.473s, height 0.473s, opacity 0.473s;
+}
+.big {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+.small {
+  width: 100px;
+  height: 100px;
+}
+.color1 {
+  background-color: red;
+}
+.color2 {
+  background-color: yellow;
+}
+.color3 {
+  background-color: #4287f5;
+}
+.bit3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: green;
+  transition: width 0.483s, height 0.483s, opacity 0.483s;
+}
+
+/* Камень-ножницы-бумага */
+.hand {
+  width: 250px;
+  margin-left: 27%;
+  margin-top: 10%;
+  display: inline-block;
+}
+@keyframes throw {
+  from { transform:rotate(40deg);}
+  to {transform: rotate(-40deg);}
+}
+@keyframes throw_mirrored {
+
+  from {
+    transform:scaleX(-1) rotate(40deg);
+
+  }
+  to {transform:scaleX(-1) rotate(-40deg);
+
+  }
+}
+@keyframes glow {
+  from{transform: scale(1.1,1.1)}
+  to {transform: scale(1,1)}
+}
+@keyframes glow_mirrored {
+  from{transform:scaleX(-1) scale(1.1,1.1)}
+  to {transform:scaleX(-1) scale(1,1)}
+}
+.hand_move {
+  animation: throw 0.8s infinite alternate;
+}
+.second_hand {
+    width: 250px;
+    margin-left: 20%;
+    margin-top: 10%;
+    transform:scaleX(-1);
+    display: inline-block;
+}
+.second_hand_move {
+  animation: throw_mirrored 0.8s infinite alternate;
+}
+.hand_glow {
+  animation: glow 0.4s;
+}
+.second_hand_glow {
+  animation: glow_mirrored 0.4s;
+}
+#start {
+  background: transparent;
+    border-width: 0;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: .3s;
+  margin: auto;
+  margin-top: 80px;
+  display: block;
+}
+#start span {
+  display: block;
+    position: relative;
+    z-index: 3;
+    background: #41294a;
+    color: white;
+    padding: 0 30px;
+    line-height: 40px;
+}
+#start:before {
+  content: "";
+    position: absolute;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    left: -5px;
+    top: -5px;
+    background: #ff2c54;
+    z-index: 1;
+    transition: .4s ease-out;
+}
+#start:hover:before {
+  transform: translate(5px, 5px);
+}
+#start:after {
+  content: "";
+    position: absolute;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    right: -5px;
+    bottom: -5px;
+    background: #41ebdf;
+    transition: .4s ease-out .1s;
+}
+#start:hover:after {
+  transform: translate(-5px, -5px);
+}
+.WinCounter {
+  margin-left: 30%;
+  font-size:20px;
+  font-family: 'Russo One', sans-serif;
+}
+.LoseCounter {
+  font-family: 'Russo One', sans-serif;
+  font-size:20px;
+  margin-left: 30%;
+  margin-top: 1%;
+}
+.DrawCounter {
+  font-family: 'Russo One', sans-serif;
+  font-size:20px;
+  margin-left: 30%;
+  margin-top: 1%;
+}
+
+/* Динозавр */
+.game {width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  margin:auto;
+}
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url(trex1.png);
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+}
+@keyframes run {
+  from{ background-image: url(trex3.png)}
+  to{background-image: url(trex4.png)}
+}
+.run {
+  animation: run 0.5s linear infinite;
+}
+.jump {
+  animation: jump 0.7s linear;
+}
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 130px;
+  }
+  50% {
+    top: 70px;
+  }
+  80% {
+    top: 130px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  background-image: url('cactus1.png');
+  background-size: 20px 47px;
+
+}
+.move {
+  animation: block 1s infinite linear;
+}
+@keyframes block {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+.gameover {
+  font-family: 'Russo One', sans-serif;
+  font-size:40px;
+  font-weight: 600;
+  margin-left:44%;
+  color: red;
+}
+.counter {
+  font-family: 'Russo One', sans-serif;
+  font-size:20px;
+  font-weight: 400;
+  margin-left:44%;
+}
+.startDino {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 20px;
+  text-decoration: none;
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #112D52;
+  background: #FF5438;
+  border: 2px solid #112D52;
+  transition: .4s linear;
+}
+.startDino:after {
+  content: "";
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   height: 130%;
+   width: 91%;
+   border: 2px solid #112D52;
+   transform: translate(-50%, -50%);
+   z-index: -1;
+}
+.startDino:hover {
+  background: #112D52;
+   color: #FF5438;
+}
+.marg {
+  margin-left: 45%;
+}
+/* Это все для проверки памяти */
+.area {
+  width: 690px;
+  height: 690px;
+  margin-left: 35%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.elem {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: #ffa299;
+  transition: all 0.7s;
+}
+.shine {
+  animation: shine 1s linear;
+}
+@keyframes shine {
+  0% {
+  background-color: #ffa299;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: #ffa299;
+  }
+}
+/* Талбетки */
+.redPill {
+  margin-left:34.5%;
+  cursor: pointer;
+}
+.bluePill{
+  margin-left:20%;
+  cursor: pointer;
+}
+/* реакция */
+.block {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin-left: 45%;
+}
+.hidden {
+  display: none;
+}
+/* Черная дыра получается */
+@keyframes move1 {
+  0% {
+    position: absolute;
+    left:0;
+    top: 0;
+  }
+  50% {
+    left: 1000px;
+    top: 500px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: 1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move1 {
+  animation: move1 3s linear;
+}
+@keyframes move2 {
+  0% {
+    position: absolute;
+    left:0;
+    top: 150px;
+  }
+  50% {
+    left: 900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: 1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move2 {
+  animation: move2 3s linear;
+}
+@keyframes move3 {
+  0% {
+    position: absolute;
+    left:0;
+    top: 230px;
+  }
+  50% {
+    left: 900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: 1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move3 {
+  animation: move3 3s linear;
+}
+@keyframes move4 {
+  0% {
+    position: absolute;
+    left:0;
+    top: 330px;
+  }
+  50% {
+    left: 900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: 1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move4 {
+  animation: move4 3s linear;
+}
+@keyframes move5 {
+  0% {
+    position: absolute;
+    left:0;
+    top: 430px;
+  }
+  50% {
+    left: 900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: 1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move5 {
+  animation: move5 3s linear;
+}
+@keyframes move6 {
+  0% {
+    position: absolute;
+    left:0px;
+    top: 60px;
+  }
+  50% {
+    left: -900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: -1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move6 {
+  animation: move6 3s linear;
+}
+@keyframes move7 {
+  0% {
+    position: absolute;
+    left:0px;
+    top: 250px;
+  }
+  50% {
+    left: -900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: -1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move7 {
+  animation: move7 3s linear;
+}
+@keyframes move8 {
+  0% {
+    position: absolute;
+    left:0px;
+    top: 360px;
+  }
+  50% {
+    left: -900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: -1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move8 {
+  animation: move8 3s linear;
+}
+@keyframes move9 {
+  0% {
+    position: absolute;
+    left:0px;
+    top: 450px;
+  }
+  50% {
+    left: -900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: -1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move9 {
+  animation: move9 3s linear;
+}
+@keyframes move9 {
+  0% {
+    position: absolute;
+    left:0px;
+    top: 600px;
+  }
+  50% {
+    left: -900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: -1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+.move10 {
+  animation: move10 3s linear;
+}
+@keyframes move10 {
+  0% {
+    position: absolute;
+    left:0px;
+    top: 800px;
+  }
+  50% {
+    left: -900px;
+    top: 450px;
+    transform: rotate(80deg);
+  }
+  100% {
+    left: -1650px;
+    top: 1200px;
+    display: none;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+.knopka {
+  width: 200px;
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(212,75,56); /* фон кнопки */
+  padding: .7em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+}
+.knopka:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+.knopka:active { background: rgb(152,15,0); } /* при нажатии */
